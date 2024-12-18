@@ -1,10 +1,19 @@
 fn main() {
-    let mut s1 = String::from("hello");
+    let mut s1 = String::from("hello how are you");
 
-    change(&mut s1);
-    println!("{s1}");
+    let s2 = first_word(&mut s1);
+
+
+    println!("{s2}");
 }
 
-fn change(some_string: &mut String) {
-    some_string.push_str(", world");
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' '{
+            return &s[0..i];
+        }
+    }
+    &s[..]
 }
