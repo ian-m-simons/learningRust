@@ -1,7 +1,22 @@
 fn main() {
-    let condition = true;
-    let number = if condition {5} else {6};
+    let mut number: i32 = 0;
+    loop {
+        let value = fib(number);
+        println!("{value}");
+        number += 1
+    }
+}
 
-    println!("The value of number is: {number}");
-
+fn fib(num: i32) -> i32 {
+    let mut value: i32 = 0;
+    if num == 0 {
+        return 0;
+    }
+    else if num == 1 {
+        return 1;
+    }
+    else {
+        value = fib(num-1) + fib (num-2);
+        return value;
+    }
 }
