@@ -1,9 +1,12 @@
 fn main() {
+    let x: (i32, f64, u8) = (500, 6.4, 1);
 
-    let tup = (500, 6.4, 1);
+    let five_hundred = x.0;
 
-    let (x, y, z) = tup;
+    let six_point_four = x.1;
 
-    println!("The value of y is: {y}");
+    let one = x.2;
+
+    println!("x.0 = {five_hundred}, x.1 = {six_point_four}, x.2 = {one}");
 
 }
