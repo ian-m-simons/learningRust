@@ -1,10 +1,7 @@
 fn main() {
-    let mut number = 3;
+    let a = [10, 20, 30, 40, 50];
 
-    while number != 0 {
-        println!("{number}!");
-
-        number -= 1;
+    for i in a {
+        println!("the value is: {i}");
     }
-    println!("LIFTOFF!!!");
 }
