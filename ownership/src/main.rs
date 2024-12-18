@@ -1,7 +1,7 @@
 fn main() {
-    let mut s1 = String::from("hello how are you");
+    let s1 = String::from("hello how are you");
 
-    let s2 = first_word(&mut s1);
+    let s2 = first_word(&s1);
 
 
     println!("{s2}");
@@ -17,3 +17,5 @@ fn first_word(s: &String) -> &str {
     }
     &s[..]
 }
+
+
