@@ -1,12 +1,22 @@
+use std::io;
+
 fn main() {
-    let x: (i32, f64, u8) = (500, 6.4, 1);
+    let a = [1, 2, 3, 4, 5];
+    println!("Please enter an array index.");
 
-    let five_hundred = x.0;
+    let mut index = String::new();
 
-    let six_point_four = x.1;
+    io::stdin()
+        .read_line(&mut index)
+        .expect("Failed to read line");
+    
+    let index: usize = index
+        .trim()
+        .parse()
+        .expect("Index entered was not a number");
 
-    let one = x.2;
+    let element = a[index];
 
-    println!("x.0 = {five_hundred}, x.1 = {six_point_four}, x.2 = {one}");
+    println!("The value of the elemente at index {index} is: {element}");
 
 }
