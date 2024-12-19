@@ -1,15 +1,23 @@
-enum Message {
-    Quit,
-    Move { x: i32, y: i32},
-    Write(String),
-    ChangeColor(i32, i32, i32),
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin{
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
 }
 
 fn main() {
-    let m = Message::Write(String::from("hello"));
-    let some_number = some(5);
-    let some_char = some('e');
+    let coin1 = Coin::Penny;
 
-    let absent_number: Option<i32> = none;
+    println!("{}", value_in_cents(coin1));
+
 
 }
