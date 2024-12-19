@@ -1,10 +1,11 @@
+struct User{
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+
 fn main() {
-    struct User {
-        active: bool,
-        username: String,
-        email: String,
-        sign_in_count: u64,
-    }
     let user1_email = String::from("someone@example.com");
     let user1_username = String::from("someusername123");
 
